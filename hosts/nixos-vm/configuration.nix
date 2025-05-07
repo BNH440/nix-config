@@ -101,6 +101,8 @@
 
   programs.hyprland.enable = true;
 
+  environment.sessionVariables.NIXOS_OZONE_WL = "1"; # fix some electron apps for wayland
+
   services.flatpak.enable = true;
 
   xdg.portal.enable = true;
