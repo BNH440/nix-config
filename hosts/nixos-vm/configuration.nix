@@ -103,17 +103,9 @@
 
   services.flatpak.enable = true;
 
-  flatpak = {
-    remotes = {
-      flathub = {
-        url = "https://flathub.org/repo/flathub.flatpakrepo";
-        priority = 1;
-      };
-    };
-    packages = [
-      "app.zen_browser.zen"
-    ];
-  };
+  services.flatpak.packages = [
+    { appId = "app.zen_browser.zen"; origin = "flathub";  }
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
