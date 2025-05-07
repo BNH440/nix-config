@@ -82,13 +82,16 @@
     neofetch
     hyprland
     waybar
-    foot
+    kitty
     wofi
     dunst
     pavucontrol
     networkmanagerapplet
     hyprpaper
     gnome-software
+    xfce.thunar
+    xfce.thunar-archive-plugin
+    gvfs
   ];
 
   services.greetd.enable = true;
