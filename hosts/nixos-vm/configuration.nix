@@ -71,7 +71,7 @@
   # programs.firefox.enable = true;
 
   nixpkgs.config.allowUnfree = true;
-  
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -103,9 +103,10 @@
 
   services.flatpak.enable = true;
 
-  services.flatpak.packages = [
-    { appId = "app.zen_browser.zen"; origin = "flathub";  }
-  ];
+  services.flatpak.update.auto = {
+    enable = true;
+    onCalendar = "weekly";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
