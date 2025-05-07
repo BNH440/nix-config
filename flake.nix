@@ -12,10 +12,10 @@
 
   outputs = { self, nixpkgs, home-manager, nix-flatpak, ... }: {
     nixosConfigurations = {
-      vm = nixpkgs.lib.nixosSystem {
+      nixos-vm = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
         modules = [
-          ./hosts/vm/configuration.nix
+          ./hosts/nixos-vm/configuration.nix
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager
           {
