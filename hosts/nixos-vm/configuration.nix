@@ -74,7 +74,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
-    neovim
     wget
     git
     htop
@@ -88,7 +87,6 @@
     networkmanagerapplet
     hyprpaper
     gnome-software
-    croc
   ];
 
   services.greetd.enable = true;

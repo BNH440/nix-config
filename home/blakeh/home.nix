@@ -1,7 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = [];
+  home.packages = [
+    neovim
+    croc
+    zed-editor
+    obsidian
+    spotify
+    discord
+  ];
   programs.bash.enable = true;
   home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
   home.file.".config/hypr/hyprpaper.conf".source = ./hyprpaper.conf;
