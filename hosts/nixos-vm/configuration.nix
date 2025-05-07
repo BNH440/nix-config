@@ -108,6 +108,12 @@
     onCalendar = "weekly";
   };
 
+  services.flatpak.packages = [
+    { appId = "app.zen_browser.zen"; origin = "flathub";  }
+    { appId = "com.discordapp.Discord"; origin = "flathub";  }
+    { appId = "com.spotify.Client"; origin = "flathub";  }
+  ];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

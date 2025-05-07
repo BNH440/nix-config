@@ -8,11 +8,7 @@
     obsidian
   ];
 
-  services.flatpak.packages = [
-    { appId = "app.zen_browser.zen"; origin = "flathub";  }
-    { appId = "com.discordapp.Discord"; origin = "flathub";  }
-    { appId = "com.spotify.Client"; origin = "flathub";  }
-  ];
+  # see configuration.nix for flatpaks
 
   programs.bash.enable = true;
   home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
