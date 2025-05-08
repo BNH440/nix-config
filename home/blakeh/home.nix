@@ -2,11 +2,16 @@
 
 {
   home.packages = with pkgs; [
+    # Programming
     neovim
-    croc
     zed-editor
+    # Productivity
     obsidian
+    geary
+    # CLI
+    croc
     starship
+    thefuck
   ];
 
   # see configuration.nix for flatpaks
