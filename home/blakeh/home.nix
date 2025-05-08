@@ -19,6 +19,7 @@
   # see configuration.nix for flatpaks
 
   programs.bash.enable = true;
+  programs.starship.enable = true;
   home.shell.enableBashIntegration = true;
   home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
   home.file.".config/hypr/hyprpaper.conf".source = ./hyprpaper.conf;
