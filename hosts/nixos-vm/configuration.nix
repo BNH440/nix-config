@@ -105,6 +105,7 @@
     gnome-software
     # Misc
     gvfs # fs plugin for thunar
+    gnome-keyring # secret manager
   ];
 
   services.greetd.enable = true;
@@ -144,6 +145,8 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/default-dark.yaml";
   };
+
+  security.pam.services.login.enableGnomeKeyring = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
