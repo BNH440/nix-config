@@ -98,6 +98,7 @@
     hyprpaper
     xfce.thunar
     xfce.thunar-archive-plugin
+    base16-schemes
     # Settings
     pavucontrol
     networkmanagerapplet
@@ -138,6 +139,9 @@
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
+
+  stylix.enable = true;
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

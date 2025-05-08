@@ -8,9 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+    stylix.url = "github:danth/stylix";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-flatpak, ... }: {
+  outputs = { self, nixpkgs, home-manager, nix-flatpak, stylix, ... }: {
     nixosConfigurations = {
       nixos-vm = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
@@ -18,6 +19,7 @@
           ./hosts/nixos-vm/configuration.nix
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager
+          stylix.nixosModules.stylix
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
