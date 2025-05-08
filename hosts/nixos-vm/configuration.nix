@@ -36,7 +36,8 @@
 
   fonts.enableDefaultPackages = true;
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "Meslo" ]; })
+    nerd-fonts.FiraCode
+    nerd-fonts.Meslo
   ];
 
   # Enable the X11 windowing system.
