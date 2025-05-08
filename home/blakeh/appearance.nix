@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib ... }:
 
 {
   # home.pointerCursor = {
@@ -10,8 +10,8 @@
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-      gtk-application-prefer-dark-theme = "1";
+      color-scheme = lib.mkForce "prefer-dark";
+      gtk-application-prefer-dark-theme = true;
     };
   };
 
