@@ -24,7 +24,7 @@
     settings = {
       format = ''$username$hostname$directory$git_branch$git_state$git_status$cmd_duration$line_break$python$character'';
 
-      directory.style = "blue";
+      directory.style = "bright-blue";
 
       character = {
         success_symbol = "[❯](purple)";
@@ -34,7 +34,7 @@
 
       git_branch = {
         format = "[$branch]($style)";
-        style = "bright-black";
+        style = "bright-white";
       };
 
       git_status = {
@@ -51,7 +51,7 @@
 
       git_state = {
         format = ''([$state( $progress_current/$progress_total)]($style)) '';
-        style = "bright-black";
+        style = "bright-white";
       };
 
       cmd_duration = {
@@ -61,7 +61,7 @@
 
       python = {
         format = "[$virtualenv]($style) ";
-        style = "bright-black";
+        style = "bright-white";
       };
     };
   };
