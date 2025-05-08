@@ -146,6 +146,7 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/default-dark.yaml";
   };
 
+  services.gnome3.gnome-keyring.enable = true;
   security.pam.services.login.enableGnomeKeyring = true;
 
   # Some programs need SUID wrappers, can be configured further or are
