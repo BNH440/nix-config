@@ -22,17 +22,7 @@
   programs.starship = {
     enable = true;
     settings = {
-      format = ''
-        $username
-        $hostname
-        $directory
-        $git_branch
-        $git_state
-        $git_status
-        $cmd_duration
-        $line_break
-        $python
-        $character'';
+      format = ''$username$hostname$directory$git_branch$git_state$git_status$cmd_duration$line_break$python$character'';
 
       directory.style = "blue";
 
@@ -48,14 +38,14 @@
       };
 
       git_status = {
-        format = "  ($ahead_behind$stashed)]($style)";
+        format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)";
         style = "cyan";
-        conflicted = "​";
-        untracked = "​";
-        modified = "​";
-        staged = "​";
-        renamed = "​";
-        deleted = "​";
+        conflicted = "";
+        untracked = "";
+        modified = "";
+        staged = "";
+        renamed = "";
+        deleted = "";
         stashed = "≡";
       };
 
