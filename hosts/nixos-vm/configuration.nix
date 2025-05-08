@@ -82,23 +82,28 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    # CLI utilities
     vim
     wget
     git
     htop
     neofetch
+    tree
+    # UI
     hyprland
     waybar
     foot
     wofi
     dunst
-    pavucontrol
-    networkmanagerapplet
     hyprpaper
-    gnome-software
     xfce.thunar
     xfce.thunar-archive-plugin
-    gvfs
+    # Settings
+    pavucontrol
+    networkmanagerapplet
+    gnome-software
+    # Misc
+    gvfs # fs plugin for thunar
   ];
 
   services.greetd.enable = true;
