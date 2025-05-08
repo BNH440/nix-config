@@ -93,6 +93,7 @@
     xfce.thunar
     xfce.thunar-archive-plugin
     gvfs
+    starship
   ];
 
   services.greetd.enable = true;
