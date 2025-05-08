@@ -83,7 +83,7 @@
     neofetch
     hyprland
     waybar
-    kitty
+    foot
     wofi
     dunst
     pavucontrol
