@@ -57,7 +57,7 @@
   # Enable sound.
   # hardware.pulseaudio.enable = true;
   # OR
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     audio.enable = true;
