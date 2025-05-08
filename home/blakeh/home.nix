@@ -16,6 +16,8 @@
     thefuck
   ];
 
+  programs.geary.enable = true;
+
   # see configuration.nix for flatpaks
 
   programs.bash.enable = true;
