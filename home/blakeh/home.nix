@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ ./appearance.nix ];
+
   home.packages = with pkgs; [
     # Programming
     neovim
