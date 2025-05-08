@@ -91,10 +91,8 @@
     tree
     # UI
     hyprland
-    waybar
     foot
     wofi
-    dunst
     hyprpaper
     xfce.thunar
     xfce.thunar-archive-plugin

@@ -9,9 +9,10 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     stylix.url = "github:danth/stylix";
+    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-flatpak, stylix, ... }: {
+  outputs = inputs @ { self, nixpkgs, home-manager, nix-flatpak, stylix, hyprpanel, ... }: {
     nixosConfigurations = {
       nixos-vm = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
@@ -26,6 +27,7 @@
             home-manager.backupFileExtension = "backup";
             home-manager.users.blakeh = import ./home/blakeh/home.nix;
           }
+          {nixpkgs.overlays = [hyprpanel.overlay];}
         ];
       };
     };
