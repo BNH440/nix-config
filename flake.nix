@@ -27,7 +27,7 @@
             home-manager.backupFileExtension = "backup";
             home-manager.users.blakeh = import ./home/blakeh/home.nix;
           }
-          {nixpkgs.overlays = [hyprpanel.overlay];}
+          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
         ];
       };
     };
