@@ -17,11 +17,6 @@
 
   gtk = {
     enable = true;
-    font = {
-      package = pkgs.nerd-fonts.meslo-lg;
-      name = "MesloLGS Nerd Font Regular";
-      size = 18;
-    };
     iconTheme = {
       package = (pkgs.catppuccin-papirus-folders.override { flavor = "mocha"; accent = "peach"; });
       name  = "Papirus-Dark";
