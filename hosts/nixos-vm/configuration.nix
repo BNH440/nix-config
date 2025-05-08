@@ -91,6 +91,7 @@
     tree
     # UI
     hyprland
+    hyprpanel
     foot
     wofi
     hyprpaper
