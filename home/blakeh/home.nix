@@ -18,7 +18,12 @@
 
   # see configuration.nix for flatpaks
 
-  programs.bash.enable = true;
+  programs.bash = {
+    enable = true;
+    bashrcExtra = ''
+      neofetch --disable packages
+    '';
+  };
   programs.starship = {
     enable = true;
     settings = {
