@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports = [ ./appearance.nix ./hyprpanel.nix ];
+  imports = [ ./appearance.nix ];
 
   home.packages = with pkgs; [
     # Programming
