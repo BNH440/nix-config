@@ -18,8 +18,8 @@
         modules = [
           ./hosts/nixos-vm/configuration.nix
           nix-flatpak.nixosModules.nix-flatpak
-          home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
+          home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
