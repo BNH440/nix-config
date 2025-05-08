@@ -141,7 +141,7 @@
   '';
 
   stylix.enable = true;
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/default-dark.yaml";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
