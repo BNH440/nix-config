@@ -143,10 +143,6 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/default-dark.yaml";
-    targets = {
-      foot.enable = false;
-      starship.enable = false;
-    };
   };
 
   # Some programs need SUID wrappers, can be configured further or are

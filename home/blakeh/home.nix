@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [ ./appearance.nix ];
@@ -23,8 +23,8 @@
   programs.starship.enable = true;
   home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
   home.file.".config/hypr/hyprpaper.conf".source = ./hyprpaper.conf;
-  home.file.".config/foot/foot.ini".source = ./foot.ini;
-  home.file.".config/starship.toml".source = ./starship.toml;
+  home.file.".config/foot/foot.ini".source = lib.mkForce ./foot.ini;
+  home.file.".config/starship.toml".source = lib.mkForce ./starship.toml;
   home.file."wallpaper.png".source = ./wallpaper.png;
 
   home.stateVersion = "24.11";
