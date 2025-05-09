@@ -16,6 +16,7 @@
     croc
     starship
     thefuck
+    btop
   ];
 
   # see configuration.nix for flatpaks
