@@ -54,14 +54,13 @@
   # Enable sound.
   # hardware.pulseaudio.enable = true;
   # OR
-  services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     audio.enable = true;
     pulse.enable = true;
     jack.enable = true;
+    wireplumber.enable = true;
   };
-  services.pipewire.wireplumber.enable = true;
 
   environment.sessionVariables.XDG_CURRENT_DESKTOP = "Hyprland";
 
