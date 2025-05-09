@@ -77,11 +77,5 @@
   home.file."wallpaper.png".source = ./wallpaper.png;
   home.file.".config/hyprpanel/config.json".source = ./hyprpanel_config.json;
 
-  systemd.user.services.gnome-keyring = {
-    Unit.Description = "GNOME Keyring";
-    Service.ExecStart = "${pkgs.gnome-keyring}/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg";
-    Install.WantedBy = [ "default.target" ];
-  };
-
   home.stateVersion = "24.11";
 }
