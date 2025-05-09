@@ -97,6 +97,7 @@
     base16-schemes
     loupe # image viewer
     celluloid # video player
+    clipmenu # clipboard history
     # Settings
     pavucontrol
     networkmanagerapplet
@@ -106,6 +107,7 @@
     gnome-keyring # secret manager
     spice-vdagent # TODO remove, for vm display
     xwayland # X11 support
+    wl-clipboard # Clipboard manager
   ];
 
   services.greetd.enable = true;
@@ -148,6 +150,15 @@
 
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.greetd.enableGnomeKeyring = true;
+
+  systemd.user.services.clipmenud = {
+    description = "Clipboard menu daemon";
+    wantedBy    = [ "default.target" ];
+    serviceConfig = {
+    ExecStart = "${pkgs.clipmenu}/bin/clipmenud";
+    Restart   = "always";
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
