@@ -160,7 +160,15 @@
   };
 
   services.gnome.gnome-keyring.enable = true;
-  security.pam.services.greetd.enableGnomeKeyring = true;
+  security.pam.services.greetd = {
+    text = ''
+        auth      substack      login
+        account   include       login
+        password  substack      login
+        session   include       login
+    '';
+    enableGnomeKeyring = true;
+  };
 
   systemd.user.services.clipmenud = {
     description = "Clipboard menu daemon";
