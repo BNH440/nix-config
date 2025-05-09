@@ -12,6 +12,8 @@
     thunderbird
     # Media
     ncspot # Spotify
+    # Communication
+    vesktop # discord client
     # CLI
     croc
     starship

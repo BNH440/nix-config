@@ -60,6 +60,12 @@
     audio.enable = true;
     pulse.enable = true;
     jack.enable = true;
+    sessionManager = "wireplumber";
+  };
+  services.wireplumber.enable = true;
+
+  environment.sessionVariables = {
+    XDG_CURRENT_DESKTOP = "Hyprland";
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -124,9 +130,15 @@
 
   services.flatpak.enable = true;
 
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  xdg.portal.config.common.default = "gtk";
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-hyprland
+    ];
+  };
 
   services.flatpak.update.auto = {
     enable = true;
