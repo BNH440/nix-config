@@ -9,7 +9,7 @@
     zed-editor
     # Productivity
     obsidian
-    geary
+    mozilla-thunderbird
     # CLI
     croc
     starship
