@@ -10,6 +10,8 @@
     # Productivity
     obsidian
     thunderbird
+    # Media
+    ncspot # Spotify
     # CLI
     croc
     starship
