@@ -61,7 +61,7 @@
     pulse.enable = true;
     jack.enable = true;
   };
-  services.wireplumber.enable = true;
+  services.pipewire.wireplumber.enable = true;
 
   environment.sessionVariables = {
     XDG_CURRENT_DESKTOP = "Hyprland";
