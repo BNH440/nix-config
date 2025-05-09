@@ -105,6 +105,7 @@
     # Misc
     gvfs # fs plugin for thunar
     gnome-keyring # secret manager
+    spice-vdagent # TODO remove, for vm display
   ];
 
   services.greetd.enable = true;
