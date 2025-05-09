@@ -63,9 +63,8 @@
   };
   services.pipewire.wireplumber.enable = true;
 
-  environment.sessionVariables = {
-    XDG_CURRENT_DESKTOP = "Hyprland";
-  };
+  environment.sessionVariables.XDG_CURRENT_DESKTOP = "Hyprland";
+
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
@@ -138,6 +137,7 @@
       xdg-desktop-portal-hyprland
     ];
   };
+  programs.dconf.enable = true;
 
   services.flatpak.update.auto = {
     enable = true;
