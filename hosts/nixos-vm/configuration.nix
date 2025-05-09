@@ -40,9 +40,6 @@
     nerd-fonts.meslo-lg
   ];
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
 
 
 
@@ -108,6 +105,7 @@
     gvfs # fs plugin for thunar
     gnome-keyring # secret manager
     spice-vdagent # TODO remove, for vm display
+    xwayland # X11 support
   ];
 
   services.greetd.enable = true;
