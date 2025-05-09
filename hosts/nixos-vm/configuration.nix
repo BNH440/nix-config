@@ -92,12 +92,14 @@
     # UI
     hyprland
     hyprpanel
-    foot
+    foot # terminal
     wofi
     hyprpaper
-    xfce.thunar
+    xfce.thunar # file manager
     xfce.thunar-archive-plugin
     base16-schemes
+    loupe # image viewer
+    celluloid # video player
     # Settings
     pavucontrol
     networkmanagerapplet
