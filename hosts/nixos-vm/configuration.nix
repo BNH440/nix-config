@@ -111,6 +111,7 @@
     spice-vdagent # TODO remove, for vm display
     xwayland # X11 support
     wl-clipboard # Clipboard manager
+    vanilla-dmz # cursor theme
   ];
 
   programs.thunar.enable = true;
@@ -160,6 +161,10 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/default-dark.yaml";
+    cursor = {
+      package = pkgs.vanilla-dmz;
+      name = "Vanilla-DMZ";
+    };
   };
 
   services.gnome.gnome-keyring.enable = true;
