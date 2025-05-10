@@ -4,6 +4,9 @@
   imports = [
     ./appearance.nix
     ./hyprpanel.nix
+    {
+      _module.args.inputs = inputs;
+    }
   ];
 
   home.packages = with pkgs; [
