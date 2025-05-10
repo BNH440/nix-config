@@ -1,7 +1,7 @@
-{ config, pkgs, lib, inputs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
-  imports = [ ./appearance.nix ./hyprpanel.nix ];
+  imports = [ ./appearance.nix ];
 
   home.packages = with pkgs; [
     # Programming
@@ -83,6 +83,7 @@
   home.file.".config/hypr/hyprpaper.conf".source = ./hyprpaper.conf;
   home.file.".config/foot/foot.ini".source = lib.mkForce ./foot.ini;
   home.file."wallpaper.png".source = ./wallpaper.png;
+  home.file.".config/hyprpanel/config.json".source = lib.mkForce ./hyprpanel_config.json;
 
   gtk = {
     enable = true;
