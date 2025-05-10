@@ -98,7 +98,7 @@
     xfce.thunar # file manager
     xfce.thunar-archive-plugin
     base16-schemes
-    imv # image viewer
+    qimgv # image viewer
     mpv # video player
     clipmenu # clipboard history
     # Settings
