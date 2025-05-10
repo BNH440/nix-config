@@ -1,6 +1,6 @@
-{ inputs, ... }:
+{ pkgs, lib, ... }:
 {
-  imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
+  imports = [ hyprpanel.homeManagerModules.hyprpanel ];
 
   programs.hyprpanel = {
 
