@@ -1,13 +1,7 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
-  imports = [
-    ./appearance.nix
-    ./hyprpanel.nix
-    {
-      _module.args.inputs = inputs;
-    }
-  ];
+  imports = [ ./appearance.nix ./hyprpanel.nix ];
 
   home.packages = with pkgs; [
     # Programming
