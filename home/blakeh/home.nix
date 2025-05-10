@@ -84,7 +84,6 @@
   home.file.".config/foot/foot.ini".source = lib.mkForce ./foot.ini;
   home.file."wallpaper.png".source = ./wallpaper.png;
   home.file.".config/hyprpanel/config.json".source = ./hyprpanel_config.json;
-  home.file.".config/hyprpanel/theme.json".source = ./hyprpanel_theme.json;
 
   gtk = {
     enable = true;
