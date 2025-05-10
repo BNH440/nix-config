@@ -23,6 +23,7 @@
     starship
     thefuck
     btop
+    lazygit
     # Theming
     adwaita-icon-theme
     vanilla-dmz # cursor theme
