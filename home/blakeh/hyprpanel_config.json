@@ -10,7 +10,7 @@
   "theme.bar.buttons.dashboard.enableBorder": false,
   "theme.bar.buttons.workspaces.enableBorder": false,
   "bar.workspaces.show_icons": false,
-  "bar.workspaces.show_numbered": false,
+  "bar.workspaces.show_numbered": true,
   "bar.workspaces.workspaceMask": false,
   "bar.workspaces.showWsIcons": false,
   "bar.windowtitle.custom_title": true,
