@@ -98,8 +98,8 @@
     xfce.thunar # file manager
     xfce.thunar-archive-plugin
     base16-schemes
-    loupe # image viewer
-    celluloid # video player
+    imv # image viewer
+    mpv # video player
     clipmenu # clipboard history
     # Settings
     pavucontrol
