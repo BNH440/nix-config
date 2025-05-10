@@ -20,6 +20,9 @@
     system = "aarch64-linux";
     pkgs = import nixpkgs {
       inherit system;
+      config = {
+        allowUnfree = true;
+      };
       overlays = [
         inputs.hyprpanel.overlay
       ];
@@ -27,7 +30,7 @@
   in {
     nixosConfigurations."nixos-vm" = nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = { inherit inputs; };
+      specialArgs = { inherit inputs pkgs; };
       modules = [
         ./hosts/nixos-vm/configuration.nix
         inputs.nix-flatpak.nixosModules.nix-flatpak
