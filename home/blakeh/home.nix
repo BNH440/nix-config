@@ -13,6 +13,7 @@
     # Productivity
     obsidian
     thunderbird
+    obs-studio
     # Media
     ncspot # Spotify
     # Communication

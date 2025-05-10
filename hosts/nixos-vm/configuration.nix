@@ -110,6 +110,7 @@
     xwayland # X11 support
     wl-clipboard # Clipboard manager
     vanilla-dmz # cursor theme
+    hyprpolkitagent # elevation utility
   ];
 
   programs.thunar.enable = true;
