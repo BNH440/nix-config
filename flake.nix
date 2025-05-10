@@ -26,7 +26,7 @@
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
             home-manager.users.blakeh = inputs.home-manager.lib.homeManagerConfiguration {
-              pkgs = inputs.nixpkgs.legacyPackages.aarch64-linux;
+              pkgs = pkgs;
               modules = [
                 ./home/blakeh/home.nix
                 {
