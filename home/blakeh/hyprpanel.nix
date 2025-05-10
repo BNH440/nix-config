@@ -24,10 +24,6 @@
     # Default: false
     overwrite.enable = true;
 
-    # Import a theme from './themes/*.json'.
-    # Default: ""
-    theme = "monochrome";
-
     # Override the final config with an arbitrary set.
     # Useful for overriding colors in your selected theme.
     # Default: {}
@@ -65,6 +61,10 @@
         };
         weather.unit = "imperial";
       };
+
+      # Import a theme from './themes/*.json'.
+      # Default: ""
+      theme.name = "monochrome";
 
       theme.font = {
         name = "MesloLGS Nerd Font Regular";
