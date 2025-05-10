@@ -17,6 +17,7 @@
 
   outputs = { self, nixpkgs, ... }@inputs:
   let
+    system = "aarch64-linux";
     pkgs = import nixpkgs {
       inherit system;
       overlays = [
