@@ -113,6 +113,11 @@
     wl-clipboard # Clipboard manager
   ];
 
+  programs.thunar.enable = true;
+  programs.xfconf.enable = true;
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
+
   services.greetd.enable = true;
   services.greetd.settings = {
     default_session = {
