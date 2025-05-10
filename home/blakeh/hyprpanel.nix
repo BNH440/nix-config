@@ -66,6 +66,8 @@
       # Default: ""
       theme.name = "monochrome";
 
+      theme.bar.transparent = true;
+
       theme.font = {
         name = "MesloLGS Nerd Font Regular";
         size = "0.9rem";
