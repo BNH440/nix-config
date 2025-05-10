@@ -27,7 +27,7 @@
   in {
     nixosConfigurations."nixos-vm" = nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = { inherit inputs pkgs; };
+      specialArgs = { inherit inputs; };
       modules = [
         ./hosts/nixos-vm/configuration.nix
         inputs.nix-flatpak.nixosModules.nix-flatpak
