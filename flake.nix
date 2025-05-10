@@ -12,7 +12,7 @@
     hyprpanel.url = "github:jas-singhfsu/hyprpanel";
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nix-flatpak, stylix, hyprpanel, ... }: {
+  outputs = inputs @ { self, nixpkgs, home-manager, nix-flatpak, stylix, ... }: {
     nixosConfigurations = {
       nixos-vm = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
@@ -25,7 +25,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-            home-manager.users.blakeh = home-manager.lib.homeManagerConfiguration {
+            home-manager.users.blakeh = inputs.home-manager.lib.homeManagerConfiguration {
               pkgs = inputs.nixpkgs.legacyPackages.aarch64-linux;
               modules = [
                 ./home/blakeh/home.nix
