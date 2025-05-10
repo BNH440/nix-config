@@ -136,7 +136,6 @@
       xdg-desktop-portal-hyprland
     ];
   };
-  programs.dconf.enable = true;
 
   services.flatpak.update.auto = {
     enable = true;

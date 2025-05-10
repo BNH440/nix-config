@@ -19,6 +19,8 @@
     starship
     thefuck
     btop
+    # Theming
+    adwaita-icon-theme
   ];
 
   # see configuration.nix for flatpaks
@@ -81,6 +83,14 @@
   home.file.".config/foot/foot.ini".source = lib.mkForce ./foot.ini;
   home.file."wallpaper.png".source = ./wallpaper.png;
   home.file.".config/hyprpanel/config.json".source = ./hyprpanel_config.json;
+
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "Adwaita-Dark";
+      package = pkgs.adwaita-icon-theme;
+    };
+  };
 
   home.stateVersion = "24.11";
 }
