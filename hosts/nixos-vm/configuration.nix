@@ -92,6 +92,7 @@
     # UI
     hyprland
     hyprpanel
+    hyprcursor
     foot # terminal
     wofi
     hyprpaper
