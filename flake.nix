@@ -25,15 +25,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-            home-manager.users.blakeh = inputs.home-manager.lib.homeManagerConfiguration {
-              pkgs = pkgs;
-              modules = [
-                ./home/blakeh/home.nix
-                {
-                  _module.args.inputs = inputs;
-                }
-              ];
-            };
+            home-manager.users.blakeh = import ./home/blakeh/home.nix;
           }
         ];
       };
