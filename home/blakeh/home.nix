@@ -21,6 +21,7 @@
     btop
     # Theming
     adwaita-icon-theme
+    vanilla-dmz # cursor theme
   ];
 
   # see configuration.nix for flatpaks
@@ -89,6 +90,10 @@
     iconTheme = {
       name = "Adwaita-Dark";
       package = pkgs.adwaita-icon-theme;
+    };
+    cursorTheme = {
+      package = pkgs.vanilla-dmz;
+      name = "Vanilla-DMZ";
     };
   };
 
