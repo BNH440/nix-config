@@ -12,7 +12,7 @@
     hyprpanel.url = "github:jas-singhfsu/hyprpanel";
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nix-flatpak, stylix, ... }: {
+  outputs = inputs @ { self, nixpkgs, home-manager, nix-flatpak, stylix, hyprpanel, ... }: {
     nixosConfigurations = {
       nixos-vm = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
