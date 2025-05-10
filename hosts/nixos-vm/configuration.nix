@@ -100,7 +100,6 @@
     base16-schemes
     qimgv # image viewer
     mpv # video player
-    clipmenu # clipboard history
     # Settings
     pavucontrol
     networkmanagerapplet
