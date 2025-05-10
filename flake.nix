@@ -9,27 +9,36 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     stylix.url = "github:danth/stylix";
-    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
+    hyprpanel = {
+      url = "github:Jas-SinghFSU/HyprPanel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-flatpak, stylix, hyprpanel, ... }: {
-    nixosConfigurations = {
-      nixos-vm = nixpkgs.lib.nixosSystem {
-        system = "aarch64-linux";
-        modules = [
-          ./hosts/nixos-vm/configuration.nix
-          nix-flatpak.nixosModules.nix-flatpak
-          stylix.nixosModules.stylix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "backup";
-            home-manager.users.blakeh = import ./home/blakeh/home.nix;
-          }
-          {nixpkgs.overlays = [hyprpanel.overlay];}
-        ];
-      };
+  outputs = { self, nixpkgs, ... }@inputs:
+  let
+    pkgs = import nixpkgs {
+      inherit system;
+      overlays = [
+        inputs.hyprpanel.overlay
+      ];
+    };
+  in {
+    nixosConfigurations."nixos-vm" = nixpkgs.lib.nixosSystem {
+      inherit system;
+      specialArgs = { inherit inputs pkgs; };
+      modules = [
+        ./hosts/nixos-vm/configuration.nix
+        inputs.nix-flatpak.nixosModules.nix-flatpak
+        inputs.stylix.nixosModules.stylix
+        inputs.home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs  = true;
+          home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = { inherit inputs pkgs; };
+          home-manager.users.blakeh     = import ./home/blakeh/home.nix;
+        }
+      ];
     };
   };
 }
