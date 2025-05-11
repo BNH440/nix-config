@@ -122,7 +122,7 @@
   services.greetd.enable = true;
   services.greetd.settings = {
     default_session = {
-      command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --time --sessions /etc/greetd/sessions --cmd Hyprland";
+      command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --time --remember --sessions /etc/greetd/sessions --cmd Hyprland";
       user = "greeter";
     };
   };
