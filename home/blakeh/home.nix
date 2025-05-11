@@ -14,10 +14,13 @@
     obsidian
     thunderbird
     obs-studio
+    gimp
+    darktable
     # Media
     ncspot # Spotify
     # Communication
     vesktop # discord client
+    signal-desktop
     # CLI
     croc
     starship
