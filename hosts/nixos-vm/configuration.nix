@@ -99,7 +99,7 @@
     base16-schemes
     qimgv # image viewer
     mpv # video player
-    hyprlock # locking utility
+    # hyprlock # locking utility # TODO re-enable hyprlock on a gpu accel machine
     # Settings
     pavucontrol
     networkmanagerapplet
@@ -179,8 +179,8 @@
     enableGnomeKeyring = true;
   };
 
-  programs.hyprlock.enable = true;
-  security.pam.services.hyprlock = {};
+  # programs.hyprlock.enable = true; # TODO re-enable hyprlock on a gpu accel machine
+  # security.pam.services.hyprlock = {};
 
   systemd.user.services.clipmenud = {
     description = "Clipboard menu daemon";
