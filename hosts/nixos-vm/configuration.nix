@@ -99,6 +99,7 @@
     base16-schemes
     qimgv # image viewer
     mpv # video player
+    hyprlock # locking utility
     # Settings
     pavucontrol
     networkmanagerapplet
@@ -177,6 +178,9 @@
     '';
     enableGnomeKeyring = true;
   };
+
+  programs.hyprlock.enable = true;
+  security.pam.services.hyprlock = {};
 
   systemd.user.services.clipmenud = {
     description = "Clipboard menu daemon";
