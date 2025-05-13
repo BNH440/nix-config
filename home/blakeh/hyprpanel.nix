@@ -29,6 +29,26 @@
     # Default: {}
     override = {};
 
+    # Configure bar layouts for monitors.
+    # See 'https://hyprpanel.com/configuration/panel.html'.
+    # Default: null
+    layout = {
+      "bar.layouts" = {
+        "0" = {
+          left = [ "dashboard" "workspaces" "windowtitle" ];
+          middle = [ "media" ];
+          right = [
+            "volume"
+            "network"
+            # "bluetooth"
+            "systray"
+            "clock"
+            "notifications"
+          ];
+        };
+      };
+    };
+
     # Configure and theme almost all options from the GUI.
     # Options that require '{}' or '[]' are not yet implemented,
     # except for the layout above.
@@ -38,24 +58,6 @@
       bar.launcher.autoDetectIcon = true;
       bar.workspaces.show_numbered = true;
       bar.windowtitle.custom_title = true;
-
-      # Configure bar layouts for monitors.
-      # See 'https://hyprpanel.com/configuration/panel.html'.
-      # Default: null
-      bar.layouts = {
-        "0" = {
-        left = [ "dashboard" "workspaces" "windowtitle" ];
-        middle = [ "media" ];
-        right = [
-            "volume"
-            "network"
-            # "bluetooth"
-            "systray"
-            "clock"
-            "notifications"
-        ];
-        };
-      };
 
       menus.dashboard.directories.enabled = false;
 
