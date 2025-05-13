@@ -1,12 +1,11 @@
 { pkgs, lib, ... }:
 
 {
-  # home.pointerCursor = {
-  #   package = pkgs.catppuccin-cursors.mochaPeach;
-  #   name = "Catppuccin-Mocha-Peach-Cursors";
-  #   size = 40;
-  #   gtk.enable = true;
-  # };
+  home.packages = with pkgs; [
+    # Theming
+    adwaita-icon-theme
+    vanilla-dmz # cursor theme
+  ];
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
@@ -15,15 +14,20 @@
     };
   };
 
-  # gtk = {
-  #   enable = true;
-  #   iconTheme = {
-  #     package = (pkgs.catppuccin-papirus-folders.override { flavor = "mocha"; accent = "peach"; });
-  #     name  = "Papirus-Dark";
-  #   };
-  #   theme = {
-  #     package = (pkgs.catppuccin-gtk.override { accents = [ "peach" ]; size = "standard"; variant = "mocha"; });
-  #     name = "Catppuccin-Mocha-Standard-Peach-Dark";
-  #   };
-  # };
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "Adwaita-Dark";
+      package = pkgs.adwaita-icon-theme;
+    };
+    cursorTheme = {
+      package = pkgs.vanilla-dmz;
+      name = "Vanilla-DMZ";
+    };
+  };
+
+  home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
+  home.file.".config/hypr/hyprpaper.conf".source = ./hyprpaper.conf;
+  home.file."wallpaper.png".source = ./wallpaper.png;
+  home.file.".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
 }
