@@ -22,6 +22,10 @@
     # Communication
     vesktop # discord client
     signal-desktop
+    # Games
+    prismlauncher # minecraft
+    lutris
+    bottles
   ];
 
   # see configuration.nix for flatpaks
