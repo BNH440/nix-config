@@ -190,6 +190,9 @@
     experimental-features = nix-command flakes
   '';
 
+  # Gaming
+  programs.steam.enable = true;
+
 
 
 
