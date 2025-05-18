@@ -48,7 +48,25 @@
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
     nerd-fonts.meslo-lg
+    inter # default ui font
+    source-serif # default serif font
+    ipafont # japanese
   ];
+  fonts.fontconfig.defaultFonts = {
+    monospace = [
+      "Inter Mono"
+      "IPAGothic"
+    ];
+    sansSerif = [
+      "Inter"
+      "IPAPGothic"
+    ];
+    serif = [
+      "source-serif"
+      "IPAPMincho"
+    ];
+  };
+
 
   # Audio
   services.pipewire = {
