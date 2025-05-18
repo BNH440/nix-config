@@ -9,7 +9,6 @@
 
   home.packages = with pkgs; [
     # Programming
-    neovim
     zed-editor
     nil # nixos language support
     # Productivity
