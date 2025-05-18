@@ -153,6 +153,7 @@
     mpv # video player
     hyprlock # locking utility
     wlsunset # blue light filter
+    hypridle
     # Settings
     pavucontrol
     networkmanagerapplet
