@@ -152,7 +152,7 @@
     qimgv # image viewer
     mpv # video player
     hyprlock # locking utility
-    hyprsunset
+    wlsunset # blue light filter
     # Settings
     pavucontrol
     networkmanagerapplet
