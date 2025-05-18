@@ -166,6 +166,7 @@
     wl-clipboard # Clipboard manager
     vanilla-dmz # cursor theme
     hyprpolkitagent # elevation utility
+    playerctl # handles keyboard media keys
   ];
 
   programs.thunar.enable = true;
