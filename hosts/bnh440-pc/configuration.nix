@@ -178,7 +178,6 @@
   };
   services.flatpak.packages = [
     { appId = "app.zen_browser.zen"; origin = "flathub";  }
-    { appId = "com.discordapp.Discord"; origin = "flathub";  }
     { appId = "com.spotify.Client"; origin = "flathub";  }
   ];
 
