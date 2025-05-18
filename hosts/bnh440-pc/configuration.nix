@@ -155,6 +155,7 @@
     pavucontrol
     networkmanagerapplet
     gnome-software
+    gparted
     # Misc
     gvfs # fs plugin for thunar
     gnome-keyring # secret manager
