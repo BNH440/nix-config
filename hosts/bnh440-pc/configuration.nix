@@ -138,6 +138,7 @@
     htop
     neofetch
     tree
+    croc # file transfer
     # UI
     hyprland
     hyprpanel
