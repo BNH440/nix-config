@@ -1,11 +1,11 @@
 { config, ... }:
 
 {
-  # Enable OpenGL
+  # Enable OpenGL support
   hardware.opengl.enable = true;
 
-  # Load NVIDIA driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
+  # Load NVIDIA driver
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
     modesetting.enable = true;
@@ -18,5 +18,13 @@
     nvidiaSettings = true;
 
     package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+  # Environment tweaks for NVIDIA + Wayland support
+  environment.variables = {
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    GBM_BACKEND = "nvidia-drm";
+    __GL_GSYNC_ALLOWED = "1";
+    __GL_VRR_ALLOWED = "1";
   };
 }
