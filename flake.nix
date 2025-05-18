@@ -17,7 +17,7 @@
 
   outputs = { self, nixpkgs, ... }@inputs:
   let
-    system = "aarch64-linux";
+    system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
       config = {
@@ -28,11 +28,11 @@
       ];
     };
   in {
-    nixosConfigurations."nixos-vm" = nixpkgs.lib.nixosSystem {
+    nixosConfigurations."bnh440-pc" = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = { inherit inputs pkgs; };
       modules = [
-        ./hosts/nixos-vm/configuration.nix
+        ./hosts/bnh440-pc/configuration.nix
         inputs.nix-flatpak.nixosModules.nix-flatpak
         inputs.stylix.nixosModules.stylix
         inputs.home-manager.nixosModules.home-manager
