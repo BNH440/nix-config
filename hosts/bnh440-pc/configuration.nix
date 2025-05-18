@@ -151,6 +151,7 @@
   environment.systemPackages = with pkgs; [
     # CLI utilities
     vim
+    neovim
     wget
     git
     htop
@@ -201,6 +202,9 @@
     { appId = "app.zen_browser.zen"; origin = "flathub";  }
     { appId = "com.spotify.Client"; origin = "flathub";  }
   ];
+
+  programs.neovim.enable = true;
+  programs.neovim.defaultEditor = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
