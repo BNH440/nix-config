@@ -2,7 +2,7 @@
 
 {
   # Enable OpenGL support
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   # Load NVIDIA driver
   services.xserver.videoDrivers = [ "nvidia" ];
