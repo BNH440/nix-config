@@ -11,6 +11,7 @@
     # Programming
     zed-editor
     nil # nixos language support
+    nixd # ^^
     # Productivity
     obsidian
     thunderbird
