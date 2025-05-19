@@ -70,6 +70,7 @@
       ];
     };
   };
+  fonts.fontDir.enable = true;
 
 
   # Audio
