@@ -48,21 +48,22 @@
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
     nerd-fonts.meslo-lg
-    inter # default ui font
-    source-serif # default serif font
+    inter
+    source-serif
+    adwaita-fonts # default font
     ipafont # japanese
   ];
   fonts.fontconfig.defaultFonts = {
     monospace = [
-      "Inter Mono"
+      "Adwaita Mono"
       "IPAGothic"
     ];
     sansSerif = [
-      "Inter"
+      "Adwaita Sans"
       "IPAPGothic"
     ];
     serif = [
-      "source-serif"
+      "DejaVu Serif"
       "IPAPMincho"
     ];
   };
