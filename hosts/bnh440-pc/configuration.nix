@@ -52,7 +52,7 @@
     source-serif
     adwaita-fonts # default font
     ipafont # japanese
-    noto-fonts-cjk-sans # korean+chinese
+    noto-fonts-cjk-sans # korean
   ];
   fonts.fontconfig = {
     enable = true;
@@ -60,10 +60,12 @@
       monospace = [
         "Adwaita Mono"
         "IPAGothic"
+        "Noto Sans Mono CJK KR"
       ];
       sansSerif = [
         "Adwaita Sans"
         "IPAPGothic"
+        "Noto Sans CJK KR"
       ];
       serif = [
         "DejaVu Serif"
