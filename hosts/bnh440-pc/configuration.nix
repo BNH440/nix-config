@@ -52,6 +52,7 @@
     source-serif
     adwaita-fonts # default font
     ipafont # japanese
+    noto-fonts-cjk-sans # korean+chinese
   ];
   fonts.fontconfig = {
     enable = true;
