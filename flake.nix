@@ -41,6 +41,7 @@
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = { inherit inputs pkgs; };
           home-manager.users.blakeh     = import ./home/blakeh/home.nix;
+          home-manager.backupFileExtension = "backup";
         }
       ];
     };
