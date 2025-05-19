@@ -59,13 +59,15 @@
     defaultFonts = {
       monospace = [
         "Adwaita Mono"
-        "IPAGothic"
+        "Noto Sans Mono CJK JP"
         "Noto Sans Mono CJK KR"
+        "IPAGothic"
       ];
       sansSerif = [
         "Adwaita Sans"
-        "IPAPGothic"
+        "Noto Sans CJK JP"
         "Noto Sans CJK KR"
+        "IPAPGothic"
       ];
       serif = [
         "DejaVu Serif"
