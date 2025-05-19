@@ -14,7 +14,7 @@
     nixd # ^^
     # Productivity
     obsidian
-    thunderbird
+    thunderbird-bin
     obs-studio
     gimp
     darktable
