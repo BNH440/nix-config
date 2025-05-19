@@ -15,7 +15,6 @@
     # Productivity
     obsidian
     thunderbird-bin
-    obs-studio
     gimp
     darktable
     # Media

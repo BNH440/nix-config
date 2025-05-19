@@ -216,6 +216,14 @@
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
 
+  programs.obs-studio = {
+    enable = true;
+    enableVirtualCamera = true;
+    package = (pkgs.obs-studio.override {
+      cudaSupport = true;
+    });
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
