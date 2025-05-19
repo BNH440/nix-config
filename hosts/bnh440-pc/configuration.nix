@@ -53,19 +53,22 @@
     adwaita-fonts # default font
     ipafont # japanese
   ];
-  fonts.fontconfig.defaultFonts = {
-    monospace = [
-      "Adwaita Mono"
-      "IPAGothic"
-    ];
-    sansSerif = [
-      "Adwaita Sans"
-      "IPAPGothic"
-    ];
-    serif = [
-      "DejaVu Serif"
-      "IPAPMincho"
-    ];
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      monospace = [
+        "Adwaita Mono"
+        "IPAGothic"
+      ];
+      sansSerif = [
+        "Adwaita Sans"
+        "IPAPGothic"
+      ];
+      serif = [
+        "DejaVu Serif"
+        "IPAPMincho"
+      ];
+    };
   };
 
 
