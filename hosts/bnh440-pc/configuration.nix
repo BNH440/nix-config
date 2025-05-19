@@ -196,6 +196,7 @@
     vanilla-dmz # cursor theme
     hyprpolkitagent # elevation utility
     playerctl # handles keyboard media keys
+    pinentry-qt # for password entry for gpg keys
   ];
 
   programs.thunar.enable = true;
@@ -236,7 +237,11 @@
   programs.steam.enable = true;
 
 
-
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-qt;
+    enableSSHSupport = true;
+  };
 
   # # Configure keymap in X11
   # services.xserver.xkb = {
