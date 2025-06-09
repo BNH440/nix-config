@@ -63,4 +63,6 @@
     };
   };
   home.shell.enableBashIntegration = true;
+
+  home.file.".config/foot/foot.ini".source = lib.mkForce ./foot.ini;
 }

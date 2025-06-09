@@ -8,13 +8,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
-    nixos-cosmic = {
-      url = "github:lilyinstarlight/nixos-cosmic";
+    stylix.url = "github:danth/stylix";
+    hyprpanel = {
+      url = "github:Jas-SinghFSU/HyprPanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, nixos-cosmic, ... }@inputs:
+  outputs = { self, nixpkgs, ... }@inputs:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -22,6 +23,9 @@
       config = {
         allowUnfree = true;
       };
+      overlays = [
+        inputs.hyprpanel.overlay
+      ];
     };
   in {
     nixosConfigurations."bnh440-pc" = nixpkgs.lib.nixosSystem {
@@ -30,7 +34,7 @@
       modules = [
         ./hosts/bnh440-pc/configuration.nix
         inputs.nix-flatpak.nixosModules.nix-flatpak
-        inputs.nixos-cosmic.nixosModules.default
+        inputs.stylix.nixosModules.stylix
         inputs.home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs  = true;
