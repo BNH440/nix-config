@@ -14,30 +14,26 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-cosmic, ... }@inputs:
-  let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config = {
-        allowUnfree = true;
-      };
-    };
-  in {
+  outputs = { self, nixpkgs, nixos-cosmic, home-manager, nix-flatpak }:
+  {
     nixosConfigurations."bnh440-pc" = nixpkgs.lib.nixosSystem {
-      inherit system;
-      specialArgs = { inherit inputs pkgs; };
+      system = "x86_64-linux";
       modules = [
-        ./hosts/bnh440-pc/configuration.nix
-        inputs.nix-flatpak.nixosModules.nix-flatpak
-        inputs.nixos-cosmic.nixosModules.default
-        inputs.home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs  = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { inherit inputs pkgs; };
-          home-manager.users.blakeh     = import ./home/blakeh/home.nix;
+          nix.settings = {
+            substituters = [ "https://cosmic.cachix.org/" ];
+            trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+          };
         }
+        nixos-cosmic.nixosModules.default
+        nix-flatpak.nixosModules.nix-flatpak
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.blakeh = import ./home/blakeh/home.nix;
+        }
+        ./hosts/bnh440-pc/configuration.nix
       ];
     };
   };
