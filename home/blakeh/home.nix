@@ -2,8 +2,6 @@
 
 {
   imports = [
-    ./appearance.nix
-    ./hyprpanel.nix
     ./shell.nix
   ];
 
