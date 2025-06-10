@@ -11,6 +11,7 @@
     nil # nixos language support
     nixd # ^^
     gh # github cli
+    jetbrains.pycharm-professional
     # Productivity
     obsidian
     thunderbird-bin
