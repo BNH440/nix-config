@@ -19,6 +19,7 @@
     # Communication
     vesktop # discord client
     signal-desktop
+    slack
     # Games
     prismlauncher # minecraft
     lutris

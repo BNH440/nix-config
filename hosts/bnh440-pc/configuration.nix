@@ -92,6 +92,8 @@
     pinentry-qt # for password entry for gpg keys
   ];
 
+  environment.sessionVariables.NIXOS_OZONE_WL = "1"; # fix wayland support for electron apps
+
   services.flatpak.enable = true;
   services.flatpak.update.auto = {
     enable = true;
