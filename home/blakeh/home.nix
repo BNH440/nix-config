@@ -14,7 +14,6 @@
     obsidian
     thunderbird-bin
     gimp
-    darktable
     # Media
     ncspot # Spotify
     # Communication

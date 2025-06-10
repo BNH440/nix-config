@@ -55,7 +55,7 @@
   # Desktop - COSMIC
   services.desktopManager.cosmic.enable = true;
   services.displayManager.cosmic-greeter.enable = true;
-  
+
   # XWayland support for COSMIC
   programs.xwayland.enable = true;
 
@@ -83,9 +83,6 @@
     qimgv # image viewer
     mpv # video player
     # Settings
-    pavucontrol
-    networkmanagerapplet
-    gnome-software
     gparted
     # Misc
     gvfs # fs plugin for file manager
