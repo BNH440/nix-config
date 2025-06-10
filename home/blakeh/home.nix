@@ -10,6 +10,7 @@
     zed-editor
     nil # nixos language support
     nixd # ^^
+    gh # github cli
     # Productivity
     obsidian
     thunderbird-bin
